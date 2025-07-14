@@ -1,0 +1,156 @@
+/* General Reset */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+
+
+/* Navbar */
+.navbar-brand {
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+
+
+.nav-link {
+  font-weight: 500;
+}
+
+.navbar .btn {
+  border-radius: 20px;
+}
+
+
+
+/* Hero Carousel */
+.carousel-item img {
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Section Heading */
+h2 {
+  color: #333;
+}
+
+
+
+
+/* Cards */
+.product-card {
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  height: 100%;                    
+  display: flex;                  
+  flex-direction: column;   
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.product-card img {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+  white-space: nowrap;             
+  overflow: hidden;                
+  text-overflow: ellipsis; 
+}
+
+
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Order Button */
+.orderBtn {
+  border-radius: 25px;
+  transition: 0.3s ease;
+}
+
+.orderBtn:hover {
+  background-color: #0a58ca;
+}
+
+
+
+
+/* Modal */
+.modal-content {
+  border-radius: 12px;
+}
+
+.modal-title {
+  font-weight: 600;
+  color: #444;
+}
+
+/* M Responsive */
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 220px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+
+  .orderBtn {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+:root {
+  --bs-primary: #6f42c1;
+  --bs-primary-rgb: 111, 66, 193;
+}
+
+.btn-primary:hover {
+  background-color: #5a34a5;
+}
+
+
+.card-img-top {
+  height: 280px;
+  width: auto;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+.card-body {
+  flex-grow: 1;                    
+  display: flex;                  
+  flex-direction: column;        
+  justify-content: space-between;}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ShopSwift - Home</title>
+  <link rel="icon" href="images/site_icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="#">ShopSwift</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Categories</a>
+            <ul class="dropdown-menu">
+            <li><a class="dropdown-item category-filter" href="#" data-category="Women">Women</a></li>
+            <li><a class="dropdown-item category-filter" href="#" data-category="Men">Men</a></li>
+            <li><a class="dropdown-item category-filter" href="#" data-category="Kids">Kids</a></li>
+            <li><a class="dropdown-item category-filter" href="#" data-category="All">All</a></li>
+            </ul>
+
+            
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </li>
+        </ul>
+        <form class="d-flex me-3" role="search" onsubmit="return false;">
+        <input class="form-control me-2" id="searchInput" type="search" placeholder="Search">
+        </form>
+
+        
+
+        <div class="d-flex">
+        <a href="login.html" class="btn btn-outline-primary me-2">Login</a>
+        <a href="signup.html" class="btn btn-primary">Signup</a>
+      </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Slider -->
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/men.jpg" class="d-block w-100" alt="i1">
+      </div>
+      <div class="carousel-item">
+        <img src="images/women_image.jpg" class="d-block w-100" alt="i2">
+      </div>
+      <div class="carousel-item">
+        <img src="images/kid_image.jpg" class="d-block w-100" alt="i3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <!-- Product Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="mb-4 fw-bold text-center">Top Trending Products</h2>
+      <div class="row" id="productList">
+
+
+        <!-- Top 3 Product list -->
+        <div class="col-md-3 mb-4" data-category="Women">
+          <div class="card product-card shadow-sm">
+            <img src="images/women_product.jpg" class="card-img-top" alt="Product">
+            <div class="card-body">
+              <h5 class="card-title">Women Fit and Flare</h5>
+              <p class="card-text">₹899 <span class="text-muted text-decoration-line-through">₹1499</span></p>
+              <button class="btn btn-sm btn-primary w-100 orderBtn">Order Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb-4" data-category="Kids">
+          <div class="card product-card shadow-sm">
+            <img src="images/kids_product.jpg" class="card-img-top" alt="Product">
+            <div class="card-body">
+              <h5 class="card-title">ELEVANTO pink Robe</h5>
+              <p class="card-text">₹669 <span class="text-muted text-decoration-line-through">₹1199</span></p>
+              <button class="btn btn-sm btn-primary w-100 orderBtn">Order Now</button>
+            </div>
+          </div>
+        </div>
+
+         <div class="col-md-3 mb-4" data-category="Men">
+          <div class="card product-card shadow-sm">
+            <img src="images/men_product.jpg" class="card-img-top" alt="Product">
+            <div class="card-body">
+              <h5 class="card-title">Stylish Kurti</h5>
+              <p class="card-text">₹575 <span class="text-muted text-decoration-line-through">₹1799</span></p>
+              <button class="btn btn-sm btn-primary w-100 orderBtn">Order Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb-4" data-category="Men">
+          <div class="card product-card shadow-sm">
+            <img src="images/men_product2.jpg" class="card-img-top" alt="Product">
+            <div class="card-body">
+              <h5 class="card-title">Men Slim Fit Solid Spread Collar Formal Shirt</h5>
+              <p class="card-text">₹1595 <span class="text-muted text-decoration-line-through">₹2799</span></p>
+              <button class="btn btn-sm btn-primary w-100 orderBtn">Order Now</button>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="col-md-3 mb-4" data-category="Men">
+          <div class="card product-card shadow-sm">
+            <img src="images/nike.jpg" class="card-img-top" alt="Product" width="200px">
+            <div class="card-body">
+              <h5 class="card-title">Polyester Black T-Shirt</h5>
+              <p class="card-text">₹3999 <span class="text-muted text-decoration-line-through">₹5499</span></p>
+              <button class="btn btn-sm btn-primary w-100 orderBtn">Order Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb-4" data-category="Women">
+          <div class="card product-card shadow-sm">
+            <img src="images/women_product2.jpg" class="card-img-top" alt="Product">
+            <div class="card-body">
+              <h5 class="card-title">Women Fit and Flare Black, White Midi/Calf Length Dress</h5>
+              <p class="card-text">₹369 <span class="text-muted text-decoration-line-through">₹399</span></p>
+              <button class="btn btn-sm btn-primary w-100 orderBtn">Order Now</button>
+            </div>
+          </div>
+        </div>
+
+       
+        <div class="col-md-3 mb-4" data-category="Kids">
+          <div class="card product-card shadow-sm">
+            <img src="images/kids_product2.jpg" class="card-img-top" alt="Product">
+            <div class="card-body">
+              <h5 class="card-title">Girls Maxi/Full Length Party Dress  (Green, 3/4 Sleeve)</h5>
+              <p class="card-text">₹999 <span class="text-muted text-decoration-line-through">₹1489</span></p>
+              <button class="btn btn-sm btn-primary w-100 orderBtn">Order Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb-4"data-category="Men">
+          <div class="card product-card shadow-sm">
+            <img src="images/men_product3.jpg" class="card-img-top" alt="Product">
+            <div class="card-body">
+              <h5 class="card-title">Men Regular Fit Printed Spread Collar Casual Shirt</h5>
+              <p class="card-text">₹1469 <span class="text-muted text-decoration-line-through">₹2199</span></p>
+              <button class="btn btn-sm btn-primary w-100 orderBtn">Order Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb-4" data-category="Women">
+          <div class="card product-card shadow-sm">
+            <img src="images/women_product3.jpg" class="card-img-top" alt="Product">
+            <div class="card-body">
+              <h5 class="card-title">Women A-line Multicolor Midi/Calf Length Dress</h5>
+              <p class="card-text">₹1575 <span class="text-muted text-decoration-line-through">₹1759</span></p>
+              <button class="btn btn-sm btn-primary w-100 orderBtn">Order Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Modal -->
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form id="orderForm">
+          <div class="modal-header">
+            <h5 class="modal-title">Order Product</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div class="text-center mb-3">
+  <img id="selectedProductImage" src="" alt="Product" class="img-fluid mb-2" style="height: 200px; object-fit: cover;">
+  <p id="selectedProduct" class="fw-bold mt-2"></p>
+</div>
+
+            <input type="text" class="form-control mb-3" placeholder="Your Name" required>
+            <input type="text" class="form-control mb-3" placeholder="Address" required>
+            <input type="number" class="form-control mb-3" placeholder="Mobile Number" required>
+          
+    <div class="mb-3">
+    <select class="form-select" id="productSize" required >
+    <option value="">Choose size</option>
+    <option value="S">S</option>
+    <option value="M">M</option>
+    <option value="L">L</option>
+    <option value="XL">E</option>
+    </select>
+  </div>
+</div>
+
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-success">Confirm Order</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS, Custom Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
