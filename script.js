@@ -1,4 +1,35 @@
-// Product Order Modal Trigger
+let selectedCategory = 'All';  // Default category
+
+// 🔁 Filter Function: Applies BOTH search and category filter
+function filterProducts() {
+  const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+  const products = document.querySelectorAll('#productList > .col-md-3');
+
+  products.forEach(product => {
+    const title = product.querySelector('.card-title').innerText.toLowerCase();
+    const category = product.getAttribute('data-category');
+
+    const matchesCategory = (selectedCategory === 'All' || category === selectedCategory);
+    const matchesSearch = title.includes(searchTerm);
+
+    product.style.display = (matchesCategory && matchesSearch) ? 'block' : 'none';
+  });
+}
+
+// ✅ Category Filter Handler
+document.querySelectorAll('.category-filter').forEach(item => {
+  item.addEventListener('click', function (e) {
+    e.preventDefault();
+    selectedCategory = this.getAttribute('data-category');
+    filterProducts();  // Apply combined filter
+  });
+});
+
+// ✅ Search Filter Handler
+document.getElementById('searchInput').addEventListener('keyup', filterProducts);
+
+
+// ✅ Modal Trigger - Works fine, keep it
 document.querySelectorAll('.orderBtn').forEach(button => {
   button.addEventListener('click', function () {
     const productCard = this.closest('.product-card');
@@ -13,48 +44,8 @@ document.querySelectorAll('.orderBtn').forEach(button => {
   });
 });
 
-
-// Order Form Submission (Optional Alert)
+// ✅ Order Submit Redirect
 document.getElementById('orderForm').addEventListener('submit', function (e) {
   e.preventDefault();
   window.location.href = 'order-success.html';
-});
-
-
-// Live Product Search
-function searchProducts() {
-  const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-  const productCards = document.querySelectorAll('#productList > .col-md-3');
-
-  productCards.forEach(card => {
-    const title = card.querySelector('.card-title').innerText.toLowerCase();
-    if (title.includes(searchTerm)) {
-      card.style.display = 'block';
-    } else {
-      card.style.display = 'none';
-    }
-  });
-}
-
-// (live search)
-document.getElementById('searchInput').addEventListener('keyup', searchProducts);
-document.getElementById('searchBtn').addEventListener('click', searchProducts);
-
-
-// Category filter
-document.querySelectorAll('.category-filter').forEach(link => {
-  link.addEventListener('click', function (e) {
-    e.preventDefault();
-    const selectedCategory = this.getAttribute('data-category');
-    const allProducts = document.querySelectorAll('#productList .col-md-3');
-
-    allProducts.forEach(product => {
-      const productCategory = product.getAttribute('data-category');
-      if (selectedCategory === 'All' || productCategory === selectedCategory) {
-        product.style.display = 'block';
-      } else {
-        product.style.display = 'none';
-      }
-    });
-  });
 });
